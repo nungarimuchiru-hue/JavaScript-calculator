@@ -10,7 +10,12 @@ const calculationHistory = [];
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
-const divide = (a, b) => a/b;
+const divide = (a, b) => {
+    if (b === 0) {
+        return "Error: Cannot divide by zero";
+    }
+    return a / b;
+};
 
 /**
  * 3. Main Controller (Code Syntax and conventions)
@@ -49,7 +54,7 @@ const historyEntry = {
     time: new Date().tolacaltimestring()
 };
 
-calculationHistory.push(historyentry);
+calculationHistory.push(historyEntry);
 return results;
 }
 
